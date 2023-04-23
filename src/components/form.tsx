@@ -7,7 +7,7 @@ interface clientProps {
     data: client
 }
 
-export default function Form(props: clientProps) {
+export default function Form(props) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
 
