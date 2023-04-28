@@ -2,10 +2,6 @@ pipeline {
     agent any 
     stages {
         stage('Stage 1') {
-            agent{
-                label "test_local"
-            }
-
             steps {
                 sh 'echo Deploy into test'
                 sh 'make deploy-test'
