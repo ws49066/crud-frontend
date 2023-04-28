@@ -1,0 +1,3 @@
+FROM node:16.10.0 as base
+
+EXPOSE 3001
