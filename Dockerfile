@@ -4,11 +4,13 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
+FROM base AS build
 WORKDIR /build
 COPY --from=base /base ./
 RUN npm -v
 RUN npm run build
 
+FROM  node:16.10.0 AS production
 WORKDIR /app
 RUN ls
 # COPY .env ./
