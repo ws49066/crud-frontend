@@ -1,0 +1,7 @@
+version: '3'
+services:
+    frontend:
+        image: crud-frontend:test
+        container_name: crud-frontend
+        ports:
+          - 8101:3000
