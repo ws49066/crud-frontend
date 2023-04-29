@@ -11,7 +11,7 @@ RUN npm -v
 RUN npm run build
 
 WORKDIR /app
-COPY .env ./
+# COPY .env ./
 COPY --from=build /build/next.config.js ./
 COPY --from=build /build/tsconfig.json ./
 COPY --from=build /build/package*.json ./
