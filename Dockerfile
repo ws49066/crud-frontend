@@ -4,7 +4,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-FROM base AS build
 WORKDIR /build
 COPY --from=base /base ./
 RUN npm -v
