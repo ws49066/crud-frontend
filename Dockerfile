@@ -13,10 +13,10 @@ RUN npm run build
 WORKDIR /app
 RUN ls
 # COPY .env ./
-COPY --from=build /build/next.config.js ./
-COPY --from=build /build/tsconfig.json ./
-COPY --from=build /build/package*.json ./
-COPY --from=build /build/.next/ ./.next
+COPY --from=build "/build/next.config.js" ./
+COPY --from=build "/build/tsconfig.json" ./
+COPY --from=build "/build/package*.json" ./
+COPY --from=build "/build/.next/" ./.next
 COPY --from=build /build/public ./public
 
 RUN ls
