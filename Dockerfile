@@ -4,7 +4,7 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-FROM base as build
+FROM base AS build
 WORKDIR /build
 COPY --from=base /base ./
 RUN npm -v
@@ -13,10 +13,10 @@ RUN npm run build
 WORKDIR /app
 RUN ls
 # COPY .env ./
-COPY --from=build "/build/next.config.js" ./
-COPY --from=build "/build/tsconfig.json" ./
-COPY --from=build "/build/package*.json" ./
-COPY --from=build "/build/.next/" ./.next
+COPY --from=build /build/next.config.js ./
+COPY --from=build /build/tsconfig.json ./
+COPY --from=build /build/package*.json ./
+COPY --from=build /build/.next/ ./.next
 COPY --from=build /build/public ./public
 
 RUN ls
