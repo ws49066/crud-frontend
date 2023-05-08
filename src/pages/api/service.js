@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 const http = axios.create({
-    baseURL: 'http://10.0.2.15:3001'
+    baseURL: 'http://localhost:3001'
 })
 
 
