@@ -4,7 +4,7 @@ import axios from "axios"
 
 
 const http = axios.create({
-    baseURL: 'http://localhost:8102'
+    baseURL: 'http://192.168.15.122:8102'
 })
 
 
